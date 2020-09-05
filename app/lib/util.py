@@ -1,7 +1,5 @@
 import json
-import os
 import sys
-from urllib import response
 
 import requests
 from fastapi.testclient import TestClient
@@ -16,17 +14,17 @@ class ApiClient:
 
     def get(self, path):
         if BASE_URL:
-            response = requests.get(BASE_URL + path)
+            resp = requests.get(BASE_URL + path)
         else:
-            response = self.client.get(path)
-        return response
+            resp = self.client.get(path)
+        return resp
 
     def post(self, path, data):
         if BASE_URL:
-            response = requests.post(BASE_URL + path, data=json.dumps(data))
+            resp = requests.post(BASE_URL + path, data=json.dumps(data))
         else:
-            response = self.client.post(path, json=data)
-        return response
+            resp = self.client.post(path, json=data)
+        return resp
 
 
 def set_logger(logger):
