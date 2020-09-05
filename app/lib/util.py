@@ -9,7 +9,7 @@ from fastapi.testclient import TestClient
 from lib.config import BASE_URL, DEBUG_LOG_FILE, LOG_LEVEL
 
 
-class Tester:
+class ApiClient:
     def __init__(self, app) -> None:
         if not BASE_URL:
             self.client = TestClient(app)

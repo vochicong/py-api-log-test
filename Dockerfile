@@ -10,3 +10,4 @@ RUN poetry install --no-root --no-dev
 COPY ./app /app
 
 # ENV APP_MODULE="main:app"
+ENV TZ Asia/Tokyo
