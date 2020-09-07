@@ -153,18 +153,6 @@ dev = ["codecov (>=2.0.15)", "colorama (>=0.3.4)", "flake8 (>=3.7.7)", "isort (>
 
 [[package]]
 category = "dev"
-description = "Сaptures loguru logging output"
-name = "loguru-caplog"
-optional = false
-python-versions = ">=3.6"
-version = "0.2.0"
-
-[package.dependencies]
-loguru = "*"
-pytest = "*"
-
-[[package]]
-category = "dev"
 description = "McCabe checker, plugin for flake8"
 name = "mccabe"
 optional = false
@@ -386,7 +374,7 @@ version = "1.0.2"
 dev = ["pytest (>=4.6.2)", "black (>=19.3b0)"]
 
 [metadata]
-content-hash = "2195f1cb4c870073dd22ee93a29d1dba36c65cec0fae77536622e18faa8756a9"
+content-hash = "bd553b3629db5881c09f80b707c901c2521d9460a338f4a21c87e1b002ba2278"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -445,10 +433,6 @@ isort = [
 loguru = [
     {file = "loguru-0.5.1-py3-none-any.whl", hash = "sha256:e5d362a43cd2fc2da63551d79a6830619c4d5b3a8b976515748026f92f351b61"},
     {file = "loguru-0.5.1.tar.gz", hash = "sha256:70201d5fce26da89b7a5f168caa2bb674e06b969829f56737db1d6472e53e7c3"},
-]
-loguru-caplog = [
-    {file = "loguru-caplog-0.2.0.tar.gz", hash = "sha256:2ebc354a3e45b41498539bc71311b670668a81d3412de6f60ee74c9407a472ed"},
-    {file = "loguru_caplog-0.2.0-py3-none-any.whl", hash = "sha256:1fb1e7afabf866de7b68bd728837e3bd0b03b69b915e9c3606fbd083fd4baaf8"},
 ]
 mccabe = [
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
