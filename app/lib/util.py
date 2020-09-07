@@ -3,7 +3,6 @@ import sys
 
 import requests
 from fastapi.testclient import TestClient
-
 from lib.config import BASE_URL, DEBUG_LOG_FILE, LOG_LEVEL
 
 

@@ -1,9 +1,8 @@
 from typing import List
 
+from lib.util import set_logger
 from loguru import logger
 from pydantic import BaseModel
-
-from lib.util import set_logger
 
 set_logger(logger)
 
