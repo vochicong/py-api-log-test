@@ -1,10 +1,7 @@
 from typing import List
 
-from lib.util import set_logger
-from loguru import logger
+from lib.util import logger
 from pydantic import BaseModel
-
-set_logger(logger)
 
 
 def add(items: List[float]):

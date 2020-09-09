@@ -3,7 +3,13 @@ import sys
 
 import requests
 from fastapi.testclient import TestClient
+from loguru import logger
+
 from lib.config import BASE_URL, DEBUG_LOG_FILE, LOG_LEVEL
+
+logger.remove()
+logger.add(DEBUG_LOG_FILE, level="DEBUG", retention="10 days")
+logger.add(sys.stderr, level=LOG_LEVEL)
 
 
 class ApiClient:
@@ -24,9 +30,3 @@ class ApiClient:
         else:
             resp = self.client.post(path, json=data)
         return resp
-
-
-def set_logger(logger):
-    logger.remove()
-    logger.add(DEBUG_LOG_FILE, level="DEBUG", retention="10 days")
-    logger.add(sys.stderr, level=LOG_LEVEL)

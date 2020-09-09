@@ -1,9 +1,7 @@
 from fastapi import FastAPI
 from lib.model import Item, add
-from lib.util import set_logger
-from loguru import logger
+from lib.util import logger
 
-set_logger(logger)
 app = FastAPI()
 
 
