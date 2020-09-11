@@ -3,9 +3,8 @@ import sys
 
 import requests
 from fastapi.testclient import TestClient
-from loguru import logger
-
 from lib.config import BASE_URL, DEBUG_LOG_FILE, LOG_LEVEL
+from loguru import logger
 
 logger.remove()
 logger.add(DEBUG_LOG_FILE, level="DEBUG", retention="10 days")

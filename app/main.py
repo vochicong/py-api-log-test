@@ -12,8 +12,15 @@ async def read_main():
     return {"msg": "Hello World"}
 
 
-@app.post("/add")
+@app.post("/add", response_model=Item)
 def add_item(item: Item):
-    s = add(item.items)
-    logger.success("Sum = {}", s)
-    return {"sum": s}
+    logger.debug("input {}", item)
+    item.total = add(item.items)
+    return item
+
+
+@app.get("/add", response_model=Item)
+def get_add(a: float, b: float):
+    logger.debug("input {} + {}", a, b)
+    item = Item(items=[a, b])
+    return add_item(item)
